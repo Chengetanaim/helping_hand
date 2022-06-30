@@ -1,0 +1,83 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+{% block content %}
+
+    <main class="container">
+        <div class="row g-5">
+
+            <div class="col-md-8">
+                 <h3 class="pb-4 mb-4 fst-italic border-bottom" style="color: coral">
+                    ABOUT US
+                 </h3>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">WHO ARE WE?</h2>
+                    <p class="blog-post-meta">{{ post.date_added }}</p>
+
+                    <p>Helping Hand is a simple platform by The Good Writer in partnership with Coding With Che aimed
+                    at empowering local citizens of Zimbabwe to share some of the intricate stories of their day to day lives.</p>
+                    <hr>
+                    <h2 class="blog-post-title">WHY SHARE?</h2>
+                    <p class="blog-post-meta">{{ post.date_added }}</p>
+
+                    <p>Mental health being one of the pressing issues in today's society, we want people to be able to find help on our
+                    platform mainly in the form of advice from the comments.  We want people to open up and show other users that they are not alone
+                    in whatever they are fighting, and of course we want them to be better at the end of the day.</p>
+                    <hr>
+                    <h2 class="blog-post-title">WHY US?</h2>
+                    <p class="blog-post-meta">{{ post.date_added }}</p>
+
+                    <p>With the increase of ghost accounts on the popular social sites, it came to my realization that at times people
+                    don't want to be known on social media, their personal details, their browsing data (which is definitely being monitored by the big
+                        social companies)
+                        .  Thats why we made this service such that the users are not known (we do not allow for creation of accounts)
+                    ensuring that users will maximize their sharing since there is no fear of judgement.</p>
+                    <hr>
+                     <h2 class="blog-post-title">CONTACT DETAILS</h2>
+                    <p class="blog-post-meta">{{ post.date_added }}</p>
+                    <p>Email: mukanhairic@gmail.com</p>
+                    <p>Whatsapp: <a
+           href="https://wa.me/263778754931" target='_blank'> <i class= "fa fa-whatsapp"></i>263778754931</a></p>
+                    <hr>
+
+
+                </article>
+
+            </div>
+
+             <div class="col-md-4">
+                  <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                      <h4 class="fst-italic">Helping Hand <img src="{% static 'media/knowledge.png' %}" width="40"></h4>
+                      <p class="mb-0">You've got a pressing issue and want help but don't want people judging you?  Our platform makes sure you are anonymous and give you the ability to share anything without people knowing you.</p>
+                    </div>
+                       <div class="col">
+                            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/static/css/images/unsplash-photo-2.jpg');">
+                              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Good things always come to those who wait</h2>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                  <li class="me-auto">
+                                    <img src="{% static 'media/Che.jpg' %}" alt="Che" width="32" height="32" class="rounded-circle border border-white">
+                                  </li>
+                                  <li class="d-flex align-items-center me-3">
+                                    <svg class="bi me-2" width="1em" height="1em"> </svg>
+                                    <small>Kwekwe</small>
+                                  </li>
+                                  <li class="d-flex align-items-center">
+                                    <svg class="bi me-2" width="1em" height="1em"></svg>
+                                    <small>The Good Writer</small>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
+             </div>
+        <br>
+     <p class="fs-5 text-muted">&copy;  2022 - The Good Writer | Helping Hand</p>
+
+    </main>
+
+{% endblock content %}

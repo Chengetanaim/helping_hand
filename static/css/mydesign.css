@@ -1,0 +1,31 @@
+.container-centre-it{
+    width: 80%;
+    margin: auto;
+}
+body{
+    background-color: #f4f4f4;
+    color: #555555;
+}
+
+.my-form{
+    padding: 20px;
+}
+
+.my-form label{
+    display: block;
+}
+
+.my-form input[type="text"], .my-form textarea{
+    padding: 8px;
+    width: 100%;
+}
+
+.my-form input[type="submit"]{
+    background-color: coral;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+}
+body input[type="text"], body textarea{
+    background-color: #fff;
+}

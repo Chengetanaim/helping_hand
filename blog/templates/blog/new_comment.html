@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}New Comment{% endblock title %}
+{% block content %}
+   <main class="container">
+            <div class="row g-5">
+                <div class="col-md-8" >
+                    <form class="my-form" method="post" action="{% url 'blog:new_comment' post.id %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Comment: </label>
+                            <textarea type="text" name="body"></textarea>
+                        </div>
+                        <input class="button" type="submit" value="Post">
+                    </form>
+                </div>
+                <div class="col-md-4">
+                  <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                      <h4 class="fst-italic">Helping Hand <img src="{% static 'media/knowledge.png' %}" width="40"></h4>
+                      <p class="mb-0">You've got a pressing issue and want help but don't want people judging you?  Our platform makes sure you are anonymous and give you the ability to share anything without people knowing you.</p>
+                    </div>
+                       <div class="col">
+                            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/static/css/images/unsplash-photo-2.jpg');">
+                              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Good things always come to those who wait</h2>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                  <li class="me-auto">
+                                    <img src="{% static 'media/Che.jpg' %}" alt="Che" width="32" height="32" class="rounded-circle border border-white">
+                                  </li>
+                                  <li class="d-flex align-items-center me-3">
+                                    <svg class="bi me-2" width="1em" height="1em"> </svg>
+                                    <small>Kwekwe</small>
+                                  </li>
+                                  <li class="d-flex align-items-center">
+                                    <svg class="bi me-2" width="1em" height="1em"></svg>
+                                    <small>The Good Writer</small>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </main>
+{% endblock content %}
